@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var randomNum;
+var youtubeLink;
 
 
 client.once('ready', () => {
@@ -19,6 +20,9 @@ client.on('message', message => {
                 message.channel.send("That's the smartest thing you've said all year!")            
         }
     }
+    youtubeLink = userMsg.indexOf("youtu");
+    if(youtubeLink != -1)
+        message.channel.send("Live demo?")
 })
 
 client.login(process.env.token)
