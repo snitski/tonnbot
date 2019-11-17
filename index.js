@@ -22,7 +22,7 @@ client.on('message', message => {
         }
     }
     youtubeLink = userMsg.indexOf("youtu");
-    link = userMsg.indexof("http")
+    link = userMsg.indexOf("http")
     if(youtubeLink != -1 && link != -1)
         message.channel.send("Live demo?")
 
