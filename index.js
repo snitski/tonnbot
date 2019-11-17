@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var randomNum;
 var youtubeLink;
+var link;
 
 
 client.once('ready', () => {
@@ -21,7 +22,8 @@ client.on('message', message => {
         }
     }
     youtubeLink = userMsg.indexOf("youtu");
-    if(youtubeLink != -1)
+    link = userMsg.indexof("http")
+    if(youtubeLink != -1 && link != -1)
         message.channel.send("Live demo?")
 })
 
