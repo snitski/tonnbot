@@ -26,7 +26,7 @@ client.on('message', message => {
     if(youtubeLink != -1 && link != -1)
         message.channel.send("Live demo?")
 
-    if(userMsg.startsWith('what'))
+    if(userMsg.startsWith('what') && (userMsg.length == 4 || userMsg.length == 5))
         message.channel.send("Am I talking to myself?")
 })
 
