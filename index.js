@@ -12,8 +12,11 @@ client.on('message', message => {
     if (message.author.id != '645702626104705031'){
         randomNum = Math.random() * 100;
         if (randomNum < 5){
-            message.channel.send("That's a note!");
-            //message.channel.send(randomNum);
+            randomNum = Math.random() * 100;
+            if(randomNum > 75)
+                message.channel.send("That's a note!");
+            else
+                message.channel.send("That's the smartest thing you've said all year!")            
         }
     }
 })
