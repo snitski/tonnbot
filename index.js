@@ -22,13 +22,14 @@ client.on('message', message => {
         randomNum = Math.random() * 100;
         if (randomNum < 5){
             randomNum = Math.random() * 100;
-            if(randomNum > 75)
+            if(randomNum >= 33)
                 message.channel.send("That's a note!");
-            else
-                message.channel.send("That's the smartest thing you've said all year!")            
+            else if(randomNum < 33 && randomNum >= 66)
+                message.channel.send("That's the smartest thing you've said all year!")
+            else if(randomNum < 66)
+                message.channel.send("You're brilliant!")            
         }
     }
-
 })
 
 client.login(process.env.token)
